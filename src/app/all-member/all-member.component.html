@@ -1,0 +1,77 @@
+<div *ngIf="!isLoader">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+
+<section class="container padding-b-30px" *ngIf="AllMemberData && isLoader">
+    <!-- 
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Field Name</th>
+                <th scope="col">Create Date</th>
+                <th scope="col">Update date</th>
+                <th scope="col">total</th>
+                <th scope="col">Total Post showroom</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of AllMemberData; let i = index">
+            <tr (click)="getMemberDetails(data.membership_id)">
+                <th scope="row">{{data.membership_id}}</th>
+                <td (click)="getMemberDetails(data.membership_id)">{{data.membership_name}}</td>
+                <td>{{data.membership_plan_duration}}</td>
+                <td>{{data.pics_per_item_inventory}}</td>
+                <td>{{data.videos_per_item_inventory}}</td>
+                <td>{{data.total_item_inventory}}</td>
+                <td>{{data.inventory_image_size_limit}}</td>
+                <td>{{data.inventory_video_size_limit}}</td>
+                <td>{{data.total_post_showroom}}</td>
+                <td>{{data.showroom_image_size_limit}}</td>
+                <td>{{data.showroom_video_size_limit}}</td>
+                <td>{{data.membership_plan_cost}}</td>
+                <td>{{data.updated_on | date}}</td>
+                <td>{{data.created_on | date}}</td>
+                <td>{{data.marketingFields[i].marketing_field_name}}</td>
+            </tr>
+
+        </tbody>
+    </table> -->
+
+    <table>
+        <caption>All Members</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Total Inventory</th>
+                <th scope="col">Total Post showroom</th>
+                <th scope="col">Membership id/Name</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">update Date</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of AllMemberData; let i = index">
+            <tr (click)="getMemberDetails(data.membership_id)">
+                <th data-label="Id">{{data.membership_id}}</th>
+                <td data-label="name" (click)="getMemberDetails(data.membership_id)">{{data.membership_name}}</td>
+                <td data-label="discription" class="description-overflow">{{data.description}}</td>
+                <td data-label="Total Inventory">{{data.total_item_inventory}}</td>
+                <td data-label="Total Post showroom">{{data.total_post_showroom}}</td>
+                <!-- <td data-label="Update Date">{{data.inventory_video_size_limit}}</td>
+                <td data-label="Update Date">{{data.total_post_showroom}}</td>
+                <td data-label="Update Date">{{data.showroom_image_size_limit}}</td>
+                <td data-label="Account">{{data.showroom_video_size_limit}}</td>
+                <td data-label="Account">{{data.membership_plan_cost}}</td> -->
+                <td data-label="Marketing id/Name">{{data.marketingFields[i].marketing_field_id}} /
+                    {{data.marketingFields[i].marketing_field_name}}</td>
+                <td data-label="Created Date">{{data.created_on | date}}</td>
+                <td data-label="Update Date">{{data.updated_on | date}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>

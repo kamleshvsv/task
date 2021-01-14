@@ -1,0 +1,43 @@
+<div *ngIf="!isLoader">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+
+<section class="container padding-b-30px" *ngIf="MemberData && isLoader">
+    <br>
+    <button class="btn  btn-primary" routerLink="/">Go to All Member</button>
+    <table>
+        <caption *ngIf="MemberData[0].membership_name"> #{{MemberData[0].membership_name}}</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Total Inventory</th>
+                <th scope="col">Total Post showroom</th>
+                <th scope="col">Membership id/Name</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">update Date</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of MemberData; let i = index">
+            <tr >
+                <th data-label="Id">{{data.membership_id}}</th>
+                <td data-label="name">{{data.membership_name}}</td>
+                <td data-label="discription" class="description-overflow">{{data.description}}</td>
+                <td data-label="Total Inventory">{{data.total_item_inventory}}</td>
+                <td data-label="Total Post showroom">{{data.total_post_showroom}}</td>
+                <!-- <td data-label="Update Date">{{data.inventory_video_size_limit}}</td>
+                <td data-label="Update Date">{{data.total_post_showroom}}</td>
+                <td data-label="Update Date">{{data.showroom_image_size_limit}}</td>
+                <td data-label="Account">{{data.showroom_video_size_limit}}</td>
+                <td data-label="Account">{{data.membership_plan_cost}}</td> -->
+                <td data-label="Marketing id/Name">{{data.marketingFields[i].marketing_field_id}} /
+                    {{data.marketingFields[i].marketing_field_name}}</td>
+                <td data-label="Created Date">{{data.created_on | date}}</td>
+                <td data-label="Update Date">{{data.updated_on | date}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>

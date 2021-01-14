@@ -1,0 +1,29 @@
+footer {
+    background: #003ca3a4;
+    color: rgb(255, 255, 255);
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+
+}
+
+
+footer p {
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 44px;
+}
+@media (max-width:599px){
+    footer {
+        background: #1A1E25;
+        color: #868c96;
+        position:relative;
+        bottom: 0px;
+        width: 100%;
+    
+    }
+    
+}
