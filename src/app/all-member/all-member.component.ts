@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./all-member.component.scss']
 })
 export class AllMemberComponent implements OnInit {
-  isLoader: Boolean = true;
+  isLoader: Boolean = false;
   AllMemberData: any = []
   constructor(private _apiService: ApiService, private route : Router) {
 

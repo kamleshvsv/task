@@ -1,0 +1,148 @@
+<!--Desing Template-->
+<section id="design-page">
+    <!--Top Section-->
+    <div class="top-section">
+        <div class="flex-70 logo">
+            <div style="display: flex;">
+                <span class="material-icons header-logo">
+                    filter_vintage
+                </span>
+                <h4 class="title-name">Show<span>Trove</span>
+                </h4>
+            </div>
+
+        </div>
+
+        <div class="flex-30">
+            <div class="display-pull-right">
+                <span class="material-icons header-icon">
+                    notifications_none
+                </span>
+                <span class="material-icons header-icon active-class">
+                    agriculture
+                </span>
+                <div class="dropdown name-align" style="top: 2px;">
+                    <span style="letter-spacing: 1px;cursor: pointer;" class="dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Johes Ferdinand
+                        <span class="material-icons arrow ">
+                            keyboard_arrow_down
+                        </span>
+                    </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding:10px;">
+                        <a class="dropdown-item" href="#">Profile</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End Top Section-->
+
+    <!--side Section-->
+    <div class="side-section ">
+        <div class="icon-div">
+            <span class="material-icons cursor-pointer">
+                assignment
+            </span>
+
+            <span class="material-icons">
+                sticky_note_2
+            </span>
+            <span class="material-icons">
+                groups
+            </span>
+            <span class="material-icons span-active">
+                person_outline
+            </span>
+            <span class="material-icons">
+                menu_book
+            </span>
+
+        </div>
+    </div>
+    <!--End Side Section -->
+
+    <!--Main Section-->
+    <div class="main-section">
+        <div class="inner-main">
+            <div class="row">
+                <div class="col-sm-6 membersip-heading">
+                    <h4>Membership</h4>
+                    <hr class="rounded" align="left">
+                </div>
+                <div class="col-sm-6 text-right mb-center">
+                    <button class="custome-btn">Add Membership</button>
+                </div>
+            </div>
+
+            <div class="white-box">
+                <div class="row margin-0xs">
+                    <div class="col-sm-4" *ngFor="let data of BoxData$; let i = index">
+                        <div class="custome-cards">
+                            <div class="text-right">
+                                <span *ngIf="data.icon === 'error'" class="material-icons error-icon">
+                                    error
+                                </span>
+                                <span *ngIf="data.icon === 'done'" class="material-icons success-icon">
+                                    done
+                                </span>
+                                <span class="material-icons" style="color: #212121 !important;cursor:pointer;"
+                                    title="Edit">
+                                    edit
+                                </span>
+                            </div>
+                            <div class="inner-card text-center">
+                                <h4 class="type">{{data.type}}</h4>
+                                <h5><span>$</span>{{data.cost}} / Month</h5>
+
+                                <div>
+                                    <p>{{data.description}}</p>
+                                    <div class="padding-lr-30 text-left">
+                                        <p>
+                                            <span class="material-icons" id="item-icon">
+                                                done
+                                            </span>
+                                            {{data.item1}}
+                                        </p>
+                                        <p>
+                                            <span class="material-icons" id="item-icon">
+                                                done
+                                            </span>
+                                            {{data.item2}}
+                                        </p>
+                                        <p>
+                                            <span *ngIf="data.icon === 'error'" class="material-icons" id="item-icon">
+                                                close
+                                            </span>
+                                            <span *ngIf="data.icon === 'done'" class="material-icons" id="item-icon">
+                                                done
+                                            </span>
+                                            {{data.item3}}
+                                        </p>
+                                        <p>
+                                            <span class="material-icons" id="item-icon">
+                                                done
+                                            </span>
+                                            {{data.item4}}
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--End Main Section-->
+
+</section>
+<!--End Design Template-->

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 import { MemberDetailsComponent } from './member-details/member-details.component';
+import { DesignComponent } from './design/design.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
     HeaderComponent,
     FooterComponent,
     AllMemberComponent,
-    MemberDetailsComponent
+    MemberDetailsComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,
